@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">APP-STOCK-MANAGEMENT</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Stock management</string>
+    <string name="nav_header_subtitle">nume restaurant</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_stock_product_name">Product name</string>
+    <string name="add_stock_product_quantity">Product quantity</string>
+    <string name="add_stock_product_price">Product price</string>
+    <string name="add_stock_category">Category:</string>
+    <string name="add_stock_btn_save">Save</string>
+
+    <string-array name="add_category_values">
+        <item>Food</item>
+        <item>Beverage</item>
+        <item>Other</item>
+    </string-array>
+</resources>
