@@ -7,6 +7,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 
+import com.example.app_stock_management.fragments.AddStockFragment;
+import com.example.app_stock_management.fragments.ListStocksFragment;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -14,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
+import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -21,17 +24,29 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
 
+    private List<Product> products = new ArrayList<>();
+
+    private Fragment currentFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initComponents();
+        if (savedInstanceState == null){
+            currentFragment = ListStocksFragment.newInstance((ArrayList<Product>) products);
+            openFragment();
+            navigationView.setCheckedItem(R.id.main_nav_lv_stocks);
+        }
     }
 
     private void initComponents() {
@@ -46,20 +61,29 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 if(item.getItemId() == R.id.main_nav_lv_stocks){
-                    Log.i("MainAct", "lv selected");
+                    currentFragment = ListStocksFragment.newInstance((ArrayList<Product>) products);
+
                 } else if (item.getItemId() == R.id.main_nav_add_stock){
-                    Log.i("MainAct", "add selected");
+                    currentFragment = new AddStockFragment();
                 }
+                openFragment();
                 drawerLayout.closeDrawer(GravityCompat.START);
                 return true;
             }
         };
     }
 
+    private void openFragment() {
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.main_frame_container, currentFragment)
+                .commit();
+    }
+
     private void configNavigation(){
         //init + link DrawerLayout
         drawerLayout = findViewById(R.id.drawer_layout);
-        //inuit Toolbar
+        //init Toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
         //set toolbar
         setSupportActionBar(toolbar);
