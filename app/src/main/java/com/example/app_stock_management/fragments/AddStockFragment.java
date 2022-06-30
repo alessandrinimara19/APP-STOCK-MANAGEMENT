@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import com.example.app_stock_management.Product;
 import com.example.app_stock_management.R;
 
 public class AddStockFragment extends Fragment {

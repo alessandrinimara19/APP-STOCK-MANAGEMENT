@@ -1,4 +1,4 @@
-package com.example.app_stock_management;
+package com.example.app_stock_management.util;
 
 import android.os.Parcel;
 import android.os.Parcelable;
