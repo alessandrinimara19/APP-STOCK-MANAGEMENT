@@ -4,22 +4,28 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.app_stock_management.database.Product;
 import com.example.app_stock_management.R;
+import com.example.app_stock_management.database.ProductService;
+import com.example.app_stock_management.network.Callback;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ListStocksFragment extends Fragment {
 
     private static final String PRODUCT_KEY = "PRODUCT_KEY";
     private ArrayList<Product> products;
     private ListView lvProducts;
+//    ProductService productService;
 
     public ListStocksFragment() {
         // Required empty public constructor

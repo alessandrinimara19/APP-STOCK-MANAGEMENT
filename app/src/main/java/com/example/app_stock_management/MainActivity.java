@@ -3,9 +3,11 @@ package com.example.app_stock_management;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.app_stock_management.database.ProductService;
 import com.example.app_stock_management.fragments.AddStockFragment;
 import com.example.app_stock_management.fragments.ListStocksFragment;
 import com.example.app_stock_management.database.Product;
+import com.example.app_stock_management.network.Callback;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
+    ProductService productService;
 
     private List<Product> products = new ArrayList<>();
 
@@ -34,11 +37,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initComponents();
+        productService = new ProductService(getApplicationContext());
+        productService.getAll(getAllProductsCallback());
         if (savedInstanceState == null){
             currentFragment = ListStocksFragment.newInstance((ArrayList<Product>) products);
             openFragment();
             navigationView.setCheckedItem(R.id.main_nav_lv_stocks);
         }
+    }
+
+    private Callback<List<Product>> getAllProductsCallback() {
+        return new Callback<List<Product>>() {
+            @Override
+            public void runResultOnUIThread(List<Product> result) {
+                if (result!=null){
+                    products.clear();
+                    products.addAll(result);
+                    //notifyAdaper();
+                }
+            }
+        };
     }
 
     private void initComponents() {

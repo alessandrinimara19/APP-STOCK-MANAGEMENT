@@ -1,10 +1,12 @@
 package com.example.app_stock_management.database;
 
 import android.content.Context;
+import android.telecom.Call;
 
 import com.example.app_stock_management.network.AsyncTaskRunner;
 import com.example.app_stock_management.network.Callback;
 
+import java.util.List;
 import java.util.concurrent.Callable;
 
 public class ProductService {
@@ -32,5 +34,16 @@ public class ProductService {
             }
         };
         asyncTaskRunner.executeAsync(insertOperation, activityThread);
+    }
+
+    public void getAll(Callback<List<Product>> activityThread){
+        Callable<List<Product>> getAllOperation = new Callable<List<Product>>() {
+            @Override
+            public List<Product> call() throws Exception {
+                return productDao.getAll();
+            }
+        };
+
+        asyncTaskRunner.executeAsync(getAllOperation, activityThread);
     }
 }
