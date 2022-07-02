@@ -1,15 +1,39 @@
-package com.example.app_stock_management.util;
+package com.example.app_stock_management.database;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "products")
 public class Product implements Parcelable {
+
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id")
+    private long id;
+
+    @ColumnInfo(name = "productName")
     private String productName;
+    @ColumnInfo(name = "productQuantity")
     private int productQuantity;
-    private int productPrice;
+    @ColumnInfo(name = "productPrice")
+    private double productPrice;
+    @ColumnInfo(name = "category")
     private String category;
 
-    public Product(String productName, int productQuantity, int productPrice, String category) {
+    public Product(long id, String productName, int productQuantity, double productPrice, String category) {
+        this.id = id;
+        this.productName = productName;
+        this.productQuantity = productQuantity;
+        this.productPrice = productPrice;
+        this.category = category;
+    }
+
+    @Ignore
+    public Product(String productName, int productQuantity, double productPrice, String category) {
         this.productName = productName;
         this.productQuantity = productQuantity;
         this.productPrice = productPrice;
@@ -27,7 +51,7 @@ public class Product implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(productName);
         dest.writeInt(productQuantity);
-        dest.writeInt(productPrice);
+        dest.writeDouble(productPrice);
         dest.writeString(category);
     }
 
@@ -48,6 +72,14 @@ public class Product implements Parcelable {
         }
     };
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
     public String getProductName() {
         return productName;
     }
@@ -64,11 +96,11 @@ public class Product implements Parcelable {
         this.productQuantity = productQuantity;
     }
 
-    public int getProductPrice() {
+    public double getProductPrice() {
         return productPrice;
     }
 
-    public void setProductPrice(int productPrice) {
+    public void setProductPrice(double productPrice) {
         this.productPrice = productPrice;
     }
 
@@ -78,5 +110,16 @@ public class Product implements Parcelable {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", productName='" + productName + '\'' +
+                ", productQuantity=" + productQuantity +
+                ", productPrice=" + productPrice +
+                ", category='" + category + '\'' +
+                '}';
     }
 }

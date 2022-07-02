@@ -5,7 +5,7 @@ import android.view.MenuItem;
 
 import com.example.app_stock_management.fragments.AddStockFragment;
 import com.example.app_stock_management.fragments.ListStocksFragment;
-import com.example.app_stock_management.util.Product;
+import com.example.app_stock_management.database.Product;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;

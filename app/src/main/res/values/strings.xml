@@ -17,6 +17,9 @@
     <string name="add_stock_product_price">Product price</string>
     <string name="add_stock_category">Category:</string>
     <string name="add_stock_btn_save">Save</string>
+    <string name="add_name_error_message">Invalid name. Minim 3 characters</string>
+    <string name="add_quantity_error_message">Invalid quantity!</string>
+    <string name="add_price_error_message">Invalid price!</string>
 
     <string-array name="add_category_values">
         <item>Food</item>

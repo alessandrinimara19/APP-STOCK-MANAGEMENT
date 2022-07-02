@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.app_stock_management.util.Product;
+import com.example.app_stock_management.database.Product;
 import com.example.app_stock_management.R;
 
 import java.util.ArrayList;
@@ -48,7 +48,7 @@ public class ListStocksFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_list_stocks, container, false);
         initComponents(view);
-        return  view;
+        return view;
     }
 
     private void initComponents(View view) {
