@@ -53,7 +53,9 @@ public class MainActivity extends AppCompatActivity {
                 if (result!=null){
                     products.clear();
                     products.addAll(result);
-                    //notifyAdaper();
+//                    if(currentFragment instanceof ListStocksFragment){
+//                        ((ListStocksFragment)currentFragment).notifyAdapter();
+//                    }
                 }
             }
         };
@@ -71,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 if(item.getItemId() == R.id.main_nav_lv_stocks){
+                    productService.getAll(getAllProductsCallback());
                     currentFragment = ListStocksFragment.newInstance((ArrayList<Product>) products);
 
                 } else if (item.getItemId() == R.id.main_nav_add_stock){
