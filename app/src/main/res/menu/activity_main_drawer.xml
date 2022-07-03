@@ -12,6 +12,10 @@
             android:id="@+id/main_nav_add_stock"
             android:icon="@drawable/ic_baseline_add_circle_24"
             android:title="Add Stock"/>
+        <item
+            android:id="@+id/main_nav_chart"
+            android:icon="@drawable/ic_baseline_bar_chart_24"
+            android:title="Statistics"/>
 
     </group>
 </menu>

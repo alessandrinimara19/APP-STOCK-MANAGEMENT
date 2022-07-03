@@ -1,6 +1,6 @@
 package com.example.app_stock_management.fragments;
 
-import android.bluetooth.BluetoothManager;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,12 +10,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.app_stock_management.database.Product;
 import com.example.app_stock_management.R;
 import com.example.app_stock_management.util.ProductAdapter;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class ListStocksFragment extends Fragment {
@@ -23,7 +27,6 @@ public class ListStocksFragment extends Fragment {
     private static final String PRODUCT_KEY = "PRODUCT_KEY";
     private ArrayList<Product> products;
     private ListView lvProducts;
-//    ProductService productService;
 
     public ListStocksFragment() {
         // Required empty public constructor
@@ -43,26 +46,11 @@ public class ListStocksFragment extends Fragment {
         adapter.notifyDataSetChanged();
     }
 
-//    @Override
-//    public void onStart() {
-//        super.onStart();
-//        notifyAdapter();
-//        Log.i("lifeCycle", "onStart()");
-//    }
-//
-//
-//    @Override
-//    public void onResume() {
-//        super.onResume();
-//        notifyAdapter();
-//        Log.i("lifeCycle", "onResume()");
-//    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.i("lifeCycle", "onCreate()");
-        //notifyAdapter();
         if (getArguments() != null) {
             products = getArguments().getParcelableArrayList(PRODUCT_KEY);
         }
@@ -71,10 +59,10 @@ public class ListStocksFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        //notifyAdapter();
-        Log.i("lifeCycle", "onCreateView()");
+        //Log.i("lifeCycle", "onCreateView()");
         View view =  inflater.inflate(R.layout.fragment_list_stocks, container, false);
         initComponents(view);
+        notifyAdapter();
         return view;
     }
 

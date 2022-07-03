@@ -1,7 +1,11 @@
 package com.example.app_stock_management;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
+import android.util.Log;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.example.app_stock_management.database.ProductService;
 import com.example.app_stock_management.fragments.AddStockFragment;
@@ -28,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private NavigationView navigationView;
     ProductService productService;
 
-    private List<Product> products = new ArrayList<>();
+    private ArrayList<Product> products = new ArrayList<>();
 
     private Fragment currentFragment;
 
@@ -78,6 +82,12 @@ public class MainActivity extends AppCompatActivity {
 
                 } else if (item.getItemId() == R.id.main_nav_add_stock){
                     currentFragment = new AddStockFragment();
+                } else if (item.getItemId() == R.id.main_nav_chart){
+                    drawerLayout.closeDrawer(GravityCompat.START);
+
+                    Intent intent = new Intent(getApplicationContext(), ChartActivity.class);
+                    intent.putParcelableArrayListExtra(ChartActivity.PRODUCT_KEY,  products);
+                    startActivity(intent);
                 }
                 openFragment();
                 drawerLayout.closeDrawer(GravityCompat.START);

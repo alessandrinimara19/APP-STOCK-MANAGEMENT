@@ -71,7 +71,6 @@ public class AddStockFragment extends Fragment {
             public void onClick(View view) {
                 if(isValid()){
                     Product product = buildProductFromComponents();
-                    Log.i("addAct", product.toString());
                     productService.insert(product, insertProductCallback());
                 }
             }

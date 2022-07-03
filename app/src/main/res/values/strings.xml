@@ -21,13 +21,15 @@
     <string name="add_quantity_error_message">Invalid quantity!</string>
     <string name="add_price_error_message">Invalid price!</string>
     <string name="element_picture">Element picture</string>
-    
+
     <string name="row_category_template">-%1$s-</string>
     <string name="row_price_template">€%1$s</string>
     <string name="lv_row_product_name">Product Name</string>
     <string name="lv_row_product_category">- Product Category -</string>
     <string name="lv_row_product_price">Product Price</string>
     <string name="lv_row_product_quantity">Product Quantity</string>
+
+    <string name="chart_legend_template">%1$s - %2$d</string>
 
     <string-array name="add_category_values">
         <item>Food</item>

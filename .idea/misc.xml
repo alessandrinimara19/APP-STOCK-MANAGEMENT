@@ -3,16 +3,28 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Home/Desktop/APLICATIE-STOCURI/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
         <entry key="..\:/Users/Home/Desktop/APLICATIE-STOCURI/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.15520833333333334" />
+        <entry key="..\:/Users/Home/Desktop/APLICATIE-STOCURI/app/src/main/res/drawable/ic_baseline_bar_chart_24.xml" value="0.19375" />
+        <entry key="..\:/Users/Home/Desktop/APLICATIE-STOCURI/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.10208333333333333" />
         <entry key="..\:/Users/Home/Desktop/APLICATIE-STOCURI/app/src/main/res/drawable/ic_baseline_euro_symbol_24.xml" value="0.15520833333333334" />
-        <entry key="..\:/Users/Home/Desktop/APLICATIE-STOCURI/app/src/main/res/layout/activity_main.xml" value="0.14965986394557823" />
-        <entry key="..\:/Users/Home/Desktop/APLICATIE-STOCURI/app/src/main/res/layout/app_bar_main.xml" value="0.536" />
+        <entry key="..\:/Users/Home/Desktop/APLICATIE-STOCURI/app/src/main/res/drawable/ic_baseline_restaurant_24.xml" value="0.10208333333333333" />
+        <entry key="..\:/Users/Home/Desktop/APLICATIE-STOCURI/app/src/main/res/drawable/ic_baseline_restaurant_menu_24.xml" value="0.176" />
+        <entry key="..\:/Users/Home/Desktop/APLICATIE-STOCURI/app/src/main/res/drawable/ic_baseline_wine_bar_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/Home/Desktop/APLICATIE-STOCURI/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
+        <entry key="..\:/Users/Home/Desktop/APLICATIE-STOCURI/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.10208333333333333" />
+        <entry key="..\:/Users/Home/Desktop/APLICATIE-STOCURI/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.10208333333333333" />
+        <entry key="..\:/Users/Home/Desktop/APLICATIE-STOCURI/app/src/main/res/drawable/side_nav_bar.xml" value="0.2703125" />
+        <entry key="..\:/Users/Home/Desktop/APLICATIE-STOCURI/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Home/Desktop/APLICATIE-STOCURI/app/src/main/res/layout/app_bar_main.xml" value="0.2" />
         <entry key="..\:/Users/Home/Desktop/APLICATIE-STOCURI/app/src/main/res/layout/content_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Home/Desktop/APLICATIE-STOCURI/app/src/main/res/layout/fragment_add_stock.xml" value="0.4" />
-        <entry key="..\:/Users/Home/Desktop/APLICATIE-STOCURI/app/src/main/res/layout/fragment_list_stocks.xml" value="0.128" />
+        <entry key="..\:/Users/Home/Desktop/APLICATIE-STOCURI/app/src/main/res/layout/fragment_add_stock.xml" value="0.5819935691318328" />
+        <entry key="..\:/Users/Home/Desktop/APLICATIE-STOCURI/app/src/main/res/layout/fragment_chart_bar.xml" value="0.4" />
+        <entry key="..\:/Users/Home/Desktop/APLICATIE-STOCURI/app/src/main/res/layout/fragment_list_stocks.xml" value="0.2449712643678161" />
         <entry key="..\:/Users/Home/Desktop/APLICATIE-STOCURI/app/src/main/res/layout/lv_row_view.xml" value="0.4" />
-        <entry key="..\:/Users/Home/Desktop/APLICATIE-STOCURI/app/src/main/res/layout/nav_header_main.xml" value="0.4" />
+        <entry key="..\:/Users/Home/Desktop/APLICATIE-STOCURI/app/src/main/res/layout/nav_header_main.xml" value="0.6" />
         <entry key="..\:/Users/Home/Desktop/APLICATIE-STOCURI/app/src/main/res/menu/activity_main_drawer.xml" value="0.536" />
+        <entry key="..\:/Users/Home/Desktop/APLICATIE-STOCURI/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2703125" />
       </map>
     </option>
   </component>

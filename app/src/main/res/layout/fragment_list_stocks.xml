@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lv_background"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.ListStocksFragment">
 
@@ -17,6 +18,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"/>
+        android:layout_marginBottom="8dp">
+    </ListView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

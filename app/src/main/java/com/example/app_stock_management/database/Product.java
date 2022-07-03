@@ -8,6 +8,8 @@ import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
+import java.io.Serializable;
+
 @Entity(tableName = "products")
 public class Product implements Parcelable {
 
@@ -41,14 +43,16 @@ public class Product implements Parcelable {
     }
 
     protected Product(Parcel in) {
+        id = in.readLong();
         productName = in.readString();
         productQuantity = in.readInt();
-        productPrice = in.readInt();
+        productPrice = in.readDouble();
         category = in.readString();
     }
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
+        dest.writeLong(id);
         dest.writeString(productName);
         dest.writeInt(productQuantity);
         dest.writeDouble(productPrice);

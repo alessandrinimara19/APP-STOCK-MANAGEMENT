@@ -38,6 +38,7 @@ public class ProductAdapter extends ArrayAdapter<Product> {
         if (product == null){
             return view;
         }
+
         addProductName(view, product.getProductName());
         addProductCategory(view, product.getCategory());
         addProductPrice(view, product.getProductPrice());
